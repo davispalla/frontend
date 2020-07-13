@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    background-color: black;
+    
+}
+
+.box {
+    position: absolute;
+    margin: auto;
+
+    transform: translate(100px, 100px );
+    width: 90px;
+    height: 40px;
+    border: 2px solid white;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.box input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    
+}
+span {
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 35px;
+    height: 35px;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all 0.4s;
+    background-color: rgb(255, 255, 255);
+} 
+/*Quando clicar, faz a transição de cores*/
+.box input:checked ~ span {
+    transform: translateX(145%) scale(1);
+    background-color: #6200EE;
+}
