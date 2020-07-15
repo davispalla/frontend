@@ -28,7 +28,7 @@ function myFunction(show){
 function checkStrength(password) {
     let strength = 0;
 
-    //If password contains both lower and uppercase characters
+    //Se a senha contiver maiusculos e minuscolo
     if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
         strength += 1;
         lowUpperCase.classList.remove('fa-circle');
@@ -37,7 +37,7 @@ function checkStrength(password) {
         lowUpperCase.classList.add('fa-circle');
         lowUpperCase.classList.remove('fa-check');
     }
-    //If it has numbers and characters
+    //Se numeros e caracteres
     if (password.match(/([0-9])/)) {
         strength += 1;
         number.classList.remove('fa-circle');
@@ -46,7 +46,7 @@ function checkStrength(password) {
         number.classList.add('fa-circle');
         number.classList.remove('fa-check');
     }
-    //If it has one special character
+    //Se um caracter especial
     if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
         strength += 1;
         specialChar.classList.remove('fa-circle');
@@ -55,7 +55,7 @@ function checkStrength(password) {
         specialChar.classList.add('fa-circle');
         specialChar.classList.remove('fa-check');
     }
-    //If password is greater than 7
+    //Se a senha for maior que 7
     if (password.length > 7) {
         strength += 1;
         eightChar.classList.remove('fa-circle');
@@ -65,7 +65,7 @@ function checkStrength(password) {
         eightChar.classList.remove('fa-check');   
     }
 
-    // If value is less than 2
+    // Se valor for menor que 2
     if (strength < 2) {
         passwordStrength.classList.remove('progress-bar-warning');
         passwordStrength.classList.remove('progress-bar-success');
